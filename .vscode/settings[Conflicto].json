@@ -1,0 +1,13 @@
+{
+    "workbench.colorCustomizations": {
+      "sideBar.background": "#be898900",
+      "sideBar.border": "#000000b9",
+      "sideBar.foreground": "#dadde2b9",
+      "sideBarSectionHeader.background": "#1ae64600",
+      "sideBarSectionHeader.border": "#39c41617",
+      "sideBarSectionHeader.foreground": "#9fc096",
+      "sideBarTitle.foreground": "#cecb40",
+      "tree.indentGuidesStroke": "#67fc05"
+    }
+  }{
+}

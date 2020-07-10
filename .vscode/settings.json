@@ -1,0 +1,19 @@
+{
+    "workbench.colorCustomizations": {
+      "sideBar.background": "#38383a00",
+      "sideBar.border": "#edeff5b9",
+      "sideBar.foreground": "#dedfd4b9",
+      "sideBarSectionHeader.background": "#1ae64600",
+      "sideBarSectionHeader.border": "#39c41617",
+      "sideBarSectionHeader.foreground": "#989cad",
+      "sideBarTitle.foreground": "#a3a386",
+      "tree.indentGuidesStroke": "#67fc05"
+    }
+
+    "files.exclude": {
+      ".vscode":true
+    
+    }
+  
+  
+}
