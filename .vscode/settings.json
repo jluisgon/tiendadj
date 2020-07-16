@@ -1,19 +1,24 @@
 {
-    "workbench.colorCustomizations": {
-      "sideBar.background": "#38383a00",
-      "sideBar.border": "#edeff5b9",
-      "sideBar.foreground": "#dedfd4b9",
-      "sideBarSectionHeader.background": "#1ae64600",
-      "sideBarSectionHeader.border": "#39c41617",
-      "sideBarSectionHeader.foreground": "#989cad",
-      "sideBarTitle.foreground": "#a3a386",
-      "tree.indentGuidesStroke": "#67fc05"
-    }
+    "workbench.preferredDarkColorTheme": "Kimbie Dark",
+    "workbench.preferredHighContrastColorTheme": "@linus.codes Light",
+    "workbench.preferredLightColorTheme": "@linus.codes Light",
+    "workbench.colorTheme": "@linus.codes Light",
+    "editor.fontWeight": "bold",
 
-    "files.exclude": {
-      ".vscode":true
-    
-    }
-  
-  
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#bcbdc293",
+        "sideBar.border": "#c53b3b7a",
+        "sideBar.foreground": "#320faf",
+        "sideBarSectionHeader.background": "#9db8a557",
+        "sideBarSectionHeader.border": "#af244694",
+        "sideBarSectionHeader.foreground": "#0c473d5e",
+        "sideBarTitle.foreground": "#0d2881",
+        "tree.indentGuidesStroke": "#ff0000"
+      }
+
+      "files.exclude": {
+        ".vscode":true
+      
+      }
+
 }

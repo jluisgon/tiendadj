@@ -46,6 +46,8 @@ LOCAL_APPS = (
 
 THIRD_PARTY_APPS = (
     'rest_framework',
+    # para trabajar con eset complemento y generar nuestro token
+    'rest_framework.authtoken'
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS

@@ -4,3 +4,4 @@ tienda/applications/home/migrations/*
 tienda/applications/users/migrations/*
 #   secret key
 tienda/secret.json
+tienda/fbkey.json

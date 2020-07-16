@@ -8,4 +8,75 @@
 
 {% block js %}
 
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+<!-- libreria axios de javascript -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    function login() {
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD6YaXUX9qLjD30kZwHD0smXFOu3GBL_94",
+            authDomain: "django-projl.firebaseapp.com",
+            databaseURL: "https://django-projl.firebaseio.com",
+            projectId: "django-projl",
+            storageBucket: "django-projl.appspot.com",
+            messagingSenderId: "787632996079",
+            appId: "1:787632996079:web:777a6fc47f936ee260651a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.idToken;
+            // The signed-in user info.
+            var user = result.user;
+            // recuperar id token user
+            user.getIdToken().then(
+                function(idToken) {
+                    // Send token to your backend via HTTPS
+                    console.log(idToken)
+                    // data es un json y eso lo que recibe el serializador
+                    var data = {
+                       'token_id' : idToken
+                    }
+                    // url que se requie haga post /api/google-login/ 
+                    // data es el serializador
+                    axios.post('/api/google-login/', data).then(
+                        function(response){
+                            console.log(response)
+                        }
+                    )
+                  }).catch(function(error) {
+                    // Handle error
+                  }
+            )           
+            // ...
+        }).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            console.log('=======')
+            console.log(error)
+            // ...
+        });
+    }
+
+
+
+</script>
+
 {% endblock js %}
