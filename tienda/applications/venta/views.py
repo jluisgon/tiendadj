@@ -108,7 +108,7 @@ class RegistraVenta2(CreateAPIView):
         # serializer puede ser cualquier nombre
         # recuperamos lo que esta en el request -> request.data
         serializer = ProcesoVentaSerializer2(data = request.data)
-        # verificar si lo que nos envian es valido y esta como indica el serializer ProcesoVentaSerializer
+        # verificar si lo que nos envian es valido y esta como indica el serializer ProcesoVentaSerializer2
         # si hay un error manda una excepcion
         serializer.is_valid(raise_exception = True)   
         # solo probar a ver si va retornando algo    
